@@ -1,64 +1,73 @@
 function doubleAll(arr) {
-
+  let newArr = [];
     for (i = 0; i < arr.length; i++){
-      arr[i] = arr[i] * 2;
+      newArr[i] = arr[i] * 2;
     }
-    return arr;
+    return newArr;
 }
 
 function absoluteValues(arr) {
+  let newArr = [];
   for (i = 0; i < arr.length; i++){
     if(arr[i] < 0){
-      arr[i] = arr[i] * -1;
+      newArr[i] = arr[i] * -1;
+    } else {
+      newArr[i] = arr[i];
     }
   }
-  return arr;
+  return newArr;
 }
 
 function yelledGreetings(arr) {
+  let newArr = [];
   for (let i = 0; i < arr.length; i++){
-    arr[i] = arr[i] + '!';
+    newArr[i] = arr[i] + '!';
   }
-  return arr;
+  return newArr;
 }
 
 function changeToInitials(arr) {
+  let newArr = [];
   for (let i = 0; i < arr.length; i++){
-    arr[i] = arr[i][0] + arr[i][arr[i].indexOf(' ') + 1];
+    newArr[i] = arr[i][0] + arr[i][arr[i].indexOf(' ') + 1];
   }
-  return arr;
+  return newArr;
 }
 
 function doubleOdd(arr) {
-    for (let i = 0; i < arr.length; i++){
-      if (arr[i] % 2 === 1 || arr[i] % 2 === -1){
-        arr[i] = arr[i] * 2;
-      }
+  let newArr = [];
+  for (let i = 0; i < arr.length; i++){
+    if (arr[i] % 2 === 1 || arr[i] % 2 === -1){
+      newArr[i] = arr[i] * 2;
+    } else {
+      newArr[i] = arr[i];
     }
-    return arr
+  }
+  return newArr;
 }
 
 function upperCaseFirstLetters(arr) {
-
+  let newArr = [];
   for (let i = 0; i < arr.length; i++){
     let initial = arr[i][0].toUpperCase();
     let restOfName = arr[i].slice(1).toLowerCase();
-    arr[i] = initial + restOfName;
+    newArr[i] = initial + restOfName;
   }
-  return arr;
+  return newArr;
 }
 
 
 function add1ToLeft(arr) {
+  let newArr = [];
   for (i = 0; i < arr.length; i++){
     if (arr[i] > 0){
-      arr[i] = Number(`1${arr[i]}`);
+      newArr[i] = Number(`1${arr[i]}`);
     } else {
       const flip = arr[i] * -1;
-      arr[i] = Number(`1${flip}`) * -1;
+      newArr[i] = Number(`1${flip}`) * -1;
     }
   }
-  return arr;  
+  return newArr;  
 }
 
 
