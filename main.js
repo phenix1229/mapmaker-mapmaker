@@ -41,17 +41,11 @@ function doubleOdd(arr) {
 function upperCaseFirstLetters(arr) {
 
   for (let i = 0; i < arr.length; i++){
-    let str = arr[i];
-    for (let ii = 0; ii < arr[i].length; ii++){
-      newStr = ''
-      if (ii === 0 || str[ii - 1] === ' '){
-        newStr = newStr + str[ii].toUpperCase();
-      } else {
-        newStr = newStr + str[ii];
-      }
-    }
-  return arr;
+    let initial = arr[i][0].toUpperCase();
+    let restOfName = arr[i].slice(1).toLowerCase();
+    arr[i] = initial + restOfName;
   }
+  return arr;
 }
 
 
